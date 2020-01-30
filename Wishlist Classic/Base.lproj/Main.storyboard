@@ -112,11 +112,86 @@
                     <navigationItem key="navigationItem" title="WishList" id="4UJ-km-g7q"/>
                     <connections>
                         <outlet property="tableView" destination="g3x-hA-3zo" id="sNu-xx-YVu"/>
+                        <segue destination="hIo-B0-Ahr" kind="presentation" identifier="toAddWishVC" id="psJ-Y9-zyr"/>
+                        <segue destination="3yt-Fe-0ti" kind="show" identifier="toDetailVC" id="0TG-3V-xna"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5df-Vv-YJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1726.0869565217392" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-36" y="1685"/>
+        </scene>
+        <!--Wish Detail View Controller-->
+        <scene sceneID="GCC-SO-3Sg">
+            <objects>
+                <viewController id="3yt-Fe-0ti" customClass="WishDetailViewController" customModule="Wishlist_Classic" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o8J-zU-ljO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qtH-16-9qw">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You wished for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-dv-QHD">
+                                        <rect key="frame" x="119" y="0.0" width="176" height="33.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDk-B6-nuk">
+                                        <rect key="frame" x="186" y="71.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utj-o4-LKy">
+                                        <rect key="frame" x="186" y="130" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-Of-ZaA">
+                                        <rect key="frame" x="87" y="188.5" width="240" height="533.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ClR-dv-QHD" firstAttribute="top" secondItem="qtH-16-9qw" secondAttribute="top" constant="32" id="PoY-26-lqo"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="3Oh-W5-32D" firstAttribute="trailing" secondItem="qtH-16-9qw" secondAttribute="trailing" id="6dV-TM-94p"/>
+                            <constraint firstItem="qtH-16-9qw" firstAttribute="top" secondItem="3Oh-W5-32D" secondAttribute="top" id="NDI-Q8-1zV"/>
+                            <constraint firstItem="3Oh-W5-32D" firstAttribute="bottom" secondItem="qtH-16-9qw" secondAttribute="bottom" id="WVf-NX-4Oh"/>
+                            <constraint firstItem="qtH-16-9qw" firstAttribute="leading" secondItem="3Oh-W5-32D" secondAttribute="leading" id="sAZ-aU-iSI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3Oh-W5-32D"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="I7S-5e-NIn"/>
+                    <connections>
+                        <outlet property="wishDescription" destination="utj-o4-LKy" id="mO4-ug-klc"/>
+                        <outlet property="wishItem" destination="dDk-B6-nuk" id="a6O-jP-4Kt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lF1-Lq-usX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-36.231884057971016" y="2452.9017857142858"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TdH-L9-cOy">
+            <objects>
+                <viewController id="hIo-B0-Ahr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i8e-0l-V3T">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yRo-RQ-2Sy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fup-En-w97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="971" y="1685"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="oDq-kf-Ypy">
@@ -134,7 +209,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cvw-oP-MtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="815.94202898550736" y="137.94642857142856"/>
+            <point key="canvasLocation" x="-36" y="913"/>
         </scene>
     </scenes>
 </document>

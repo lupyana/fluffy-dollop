@@ -11,6 +11,8 @@ import UIKit
 class WishListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var tableView: UITableView!
+    var chosenWish: Wish?
+    
     override func viewDidLoad() {
            super.viewDidLoad()
            self.navigationItem.title = "Your Title"
@@ -18,6 +20,8 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
            
         tableView.dataSource = self
         tableView.delegate = self
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "bell"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(addWishButtonClicked))
        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,5 +33,23 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         cell.textLabel?.text = wishes[indexPath.row].item
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        chosenWish = wishes[indexPath.row]
+        self.performSegue(withIdentifier: "toDetailVC", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailVC" {
+            let destination  = segue.destination as! WishDetailViewController
+            destination.selectedWish = chosenWish
+        }
+    }
+    
+    @objc func addWishButtonClicked() {
+         performSegue(withIdentifier: "toAddWishVC", sender: self)
+    }
+    
+    
 
 }

@@ -16,6 +16,7 @@
 		A3EE37AD23E2C93700DB2FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EE37AB23E2C93700DB2FDF /* LaunchScreen.storyboard */; };
 		A3EE37B523E2CC0500DB2FDF /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EE37B423E2CC0500DB2FDF /* WishListViewController.swift */; };
 		A3EE37B823E2D32C00DB2FDF /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EE37B723E2D32C00DB2FDF /* Wish.swift */; };
+		A3EE37BA23E2D6C400DB2FDF /* WishDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EE37B923E2D6C400DB2FDF /* WishDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A3EE37AE23E2C93700DB2FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3EE37B423E2CC0500DB2FDF /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
 		A3EE37B723E2D32C00DB2FDF /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
+		A3EE37B923E2D6C400DB2FDF /* WishDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				A3EE37A123E2C93200DB2FDF /* ViewController.swift */,
 				A3EE37A323E2C93200DB2FDF /* Main.storyboard */,
 				A3EE37B423E2CC0500DB2FDF /* WishListViewController.swift */,
+				A3EE37B923E2D6C400DB2FDF /* WishDetailViewController.swift */,
 				A3EE37A923E2C93700DB2FDF /* Assets.xcassets */,
 				A3EE37AB23E2C93700DB2FDF /* LaunchScreen.storyboard */,
 				A3EE37AE23E2C93700DB2FDF /* Info.plist */,
@@ -159,6 +162,7 @@
 				A3EE37B523E2CC0500DB2FDF /* WishListViewController.swift in Sources */,
 				A3EE37A823E2C93200DB2FDF /* Wishlist_Classic.xcdatamodeld in Sources */,
 				A3EE379E23E2C93200DB2FDF /* AppDelegate.swift in Sources */,
+				A3EE37BA23E2D6C400DB2FDF /* WishDetailViewController.swift in Sources */,
 				A3EE37B823E2D32C00DB2FDF /* Wish.swift in Sources */,
 				A3EE37A023E2C93200DB2FDF /* SceneDelegate.swift in Sources */,
 			);
