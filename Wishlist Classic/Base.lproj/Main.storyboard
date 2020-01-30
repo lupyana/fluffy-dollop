@@ -112,7 +112,7 @@
                     <navigationItem key="navigationItem" title="WishList" id="4UJ-km-g7q"/>
                     <connections>
                         <outlet property="tableView" destination="g3x-hA-3zo" id="sNu-xx-YVu"/>
-                        <segue destination="hIo-B0-Ahr" kind="presentation" identifier="toAddWishVC" modalPresentationStyle="fullScreen" id="psJ-Y9-zyr"/>
+                        <segue destination="hIo-B0-Ahr" kind="presentation" identifier="toAddWishVC" modalPresentationStyle="automatic" id="psJ-Y9-zyr"/>
                         <segue destination="3yt-Fe-0ti" kind="show" identifier="toDetailVC" id="0TG-3V-xna"/>
                     </connections>
                 </viewController>
@@ -180,11 +180,11 @@
             <objects>
                 <viewController id="hIo-B0-Ahr" customClass="NewWishViewController" customModule="Wishlist_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8e-0l-V3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-z9-3tz">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="31v-AS-D1s">
                                         <rect key="frame" x="8" y="8" width="398" height="86"/>
@@ -226,11 +226,11 @@
                                         <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-CV-FRG">
-                                        <rect key="frame" x="8" y="579" width="398" height="103"/>
+                                        <rect key="frame" x="8" y="579" width="398" height="93"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-Vx-ZyP">
-                                        <rect key="frame" x="8" y="760" width="398" height="50"/>
+                                        <rect key="frame" x="8" y="750" width="398" height="50"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="13E-Dz-FSq"/>
@@ -256,6 +256,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yRo-RQ-2Sy"/>
                     </view>
+                    <navigationItem key="navigationItem" id="MKg-la-dDF"/>
                     <connections>
                         <outlet property="wishDescription" destination="hou-Xo-igl" id="yKE-6h-frt"/>
                         <outlet property="wishItem" destination="Y5q-Vh-gen" id="UZr-qZ-rcK"/>

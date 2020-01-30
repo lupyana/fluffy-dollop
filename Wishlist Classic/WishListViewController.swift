@@ -22,6 +22,8 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         tableView.delegate = self
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "bell"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(addWishButtonClicked))
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,6 +57,11 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
         performSegue(withIdentifier: "toAddWishVC", sender: self)
     }
     
+    @objc func loadList(notification: NSNotification){
+        print("called")
+        //load data here
+        self.tableView.reloadData()
+    }
     
     
 }

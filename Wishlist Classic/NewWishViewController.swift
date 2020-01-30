@@ -15,7 +15,9 @@ class NewWishViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelButtonPressed))
+        
+      
     }
     
     
@@ -26,7 +28,7 @@ class NewWishViewController: UIViewController {
         } else {
             let newWish = Wish(item: wishItem?.text ?? "", wishDescription: wishDescription.text!)
             wishes.append(newWish)
-            print(wishes)
+             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
             dismiss(animated: true, completion: nil)
             
         }
@@ -39,6 +41,10 @@ class NewWishViewController: UIViewController {
         }
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func cancelButtonPressed() {
+        
     }
     
 }
