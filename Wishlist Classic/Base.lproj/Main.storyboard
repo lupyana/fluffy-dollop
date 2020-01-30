@@ -80,23 +80,23 @@
                     </view>
                     <connections>
                         <outlet property="nameTextField" destination="x5C-Gb-w8N" id="UCg-f7-GIo"/>
-                        <segue destination="M4u-3c-XGA" kind="presentation" identifier="toWishListVc" modalPresentationStyle="fullScreen" id="6BS-Zz-xKh"/>
+                        <segue destination="AYX-VM-xhK" kind="presentation" identifier="toWishListVc" modalPresentationStyle="fullScreen" id="6BS-Zz-xKh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-35" y="138"/>
         </scene>
-        <!--View Controller-->
+        <!--WishList-->
         <scene sceneID="B4t-9I-v05">
             <objects>
-                <viewController storyboardIdentifier="wishList" id="M4u-3c-XGA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="wishList" id="M4u-3c-XGA" customClass="WishListViewController" customModule="Wishlist_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1M3-eT-jLJ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="g3x-hA-3zo">
-                                <rect key="frame" x="16" y="60" width="382" height="786"/>
+                                <rect key="frame" x="16" y="156" width="382" height="690"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -109,10 +109,32 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A1H-nD-Qfh"/>
                     </view>
+                    <navigationItem key="navigationItem" title="WishList" id="4UJ-km-g7q"/>
+                    <connections>
+                        <outlet property="tableView" destination="g3x-hA-3zo" id="sNu-xx-YVu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5df-Vv-YJ2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="817" y="138"/>
+            <point key="canvasLocation" x="1726.0869565217392" y="137.94642857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="oDq-kf-Ypy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AYX-VM-xhK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6sV-Bw-UM7">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M4u-3c-XGA" kind="relationship" relationship="rootViewController" id="pIQ-LL-vA7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cvw-oP-MtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="815.94202898550736" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>

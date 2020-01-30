@@ -14,7 +14,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+       
         // Do any additional setup after loading the view.
+        
+        
     }
 
     @IBAction func continueButtonPressed(_ sender: Any) {
@@ -34,7 +37,6 @@ class ViewController: UIViewController {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
-    
     
 }
 
