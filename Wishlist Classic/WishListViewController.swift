@@ -21,12 +21,12 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return wishes.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "Wish"
+        cell.textLabel?.text = wishes[indexPath.row].item
         return cell
     }
 

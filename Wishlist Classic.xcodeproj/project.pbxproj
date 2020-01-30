@@ -15,6 +15,7 @@
 		A3EE37AA23E2C93700DB2FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3EE37A923E2C93700DB2FDF /* Assets.xcassets */; };
 		A3EE37AD23E2C93700DB2FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3EE37AB23E2C93700DB2FDF /* LaunchScreen.storyboard */; };
 		A3EE37B523E2CC0500DB2FDF /* WishListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EE37B423E2CC0500DB2FDF /* WishListViewController.swift */; };
+		A3EE37B823E2D32C00DB2FDF /* Wish.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3EE37B723E2D32C00DB2FDF /* Wish.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A3EE37AC23E2C93700DB2FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A3EE37AE23E2C93700DB2FDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A3EE37B423E2CC0500DB2FDF /* WishListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishListViewController.swift; sourceTree = "<group>"; };
+		A3EE37B723E2D32C00DB2FDF /* Wish.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wish.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		A3EE379C23E2C93200DB2FDF /* Wishlist Classic */ = {
 			isa = PBXGroup;
 			children = (
+				A3EE37B623E2D31A00DB2FDF /* Models */,
 				A3EE379D23E2C93200DB2FDF /* AppDelegate.swift */,
 				A3EE379F23E2C93200DB2FDF /* SceneDelegate.swift */,
 				A3EE37A123E2C93200DB2FDF /* ViewController.swift */,
@@ -71,6 +74,14 @@
 				A3EE37A623E2C93200DB2FDF /* Wishlist_Classic.xcdatamodeld */,
 			);
 			path = "Wishlist Classic";
+			sourceTree = "<group>";
+		};
+		A3EE37B623E2D31A00DB2FDF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3EE37B723E2D32C00DB2FDF /* Wish.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +159,7 @@
 				A3EE37B523E2CC0500DB2FDF /* WishListViewController.swift in Sources */,
 				A3EE37A823E2C93200DB2FDF /* Wishlist_Classic.xcdatamodeld in Sources */,
 				A3EE379E23E2C93200DB2FDF /* AppDelegate.swift in Sources */,
+				A3EE37B823E2D32C00DB2FDF /* Wish.swift in Sources */,
 				A3EE37A023E2C93200DB2FDF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
