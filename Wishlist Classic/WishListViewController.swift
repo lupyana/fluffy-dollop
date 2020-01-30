@@ -15,13 +15,17 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Your Title"
+        
+        //get user name from defaults
+         let username = UserDefaults.standard.string(forKey: "firstname")!
+        
+        self.navigationItem.title = "\(username)'s List"
         // Do any additional setup after loading the view.
         
         tableView.dataSource = self
         tableView.delegate = self
         
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "bell"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(addWishButtonClicked))
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "plus"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(addWishButtonClicked))
         
         NotificationCenter.default.addObserver(self, selector: #selector(loadList), name: NSNotification.Name(rawValue: "load"), object: nil)
     }

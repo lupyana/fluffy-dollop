@@ -9,24 +9,28 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var nameTextField: UITextField!
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         // Do any additional setup after loading the view.
         
         
     }
-
+    
     @IBAction func continueButtonPressed(_ sender: Any) {
         if (nameTextField.text! == ""){
             self.makeAlert(alertTitle: "Error", alertMessage: "Name field can't be empty")
         }else {
-             performSegue(withIdentifier: "toWishListVc", sender: self)
+            
+            self.defaults.set(true, forKey: "existingUser")
+            self.defaults.set(nameTextField.text!, forKey: "firstname")
+            performSegue(withIdentifier: "toWishListVc", sender: self)
         }
-       
+        
     }
     
     func makeAlert(alertTitle: String, alertMessage: String) {

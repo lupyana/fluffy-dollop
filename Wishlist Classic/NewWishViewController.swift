@@ -17,9 +17,9 @@ class NewWishViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelButtonPressed))
         
+        self.isModalInPresentation = true
       
     }
-    
     
     
     @IBAction func saveButtonClicked(_ sender: Any) {
