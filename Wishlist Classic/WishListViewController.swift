@@ -9,20 +9,25 @@
 import UIKit
 
 class WishListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet weak var tableView: UITableView!
     var chosenWish: Wish?
     
     override func viewDidLoad() {
-           super.viewDidLoad()
-           self.navigationItem.title = "Your Title"
-           // Do any additional setup after loading the view.
-           
+        super.viewDidLoad()
+        self.navigationItem.title = "Your Title"
+        // Do any additional setup after loading the view.
+        
         tableView.dataSource = self
         tableView.delegate = self
         
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage.init(systemName: "bell"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(addWishButtonClicked))
-       }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wishes.count
@@ -47,9 +52,9 @@ class WishListViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @objc func addWishButtonClicked() {
-         performSegue(withIdentifier: "toAddWishVC", sender: self)
+        performSegue(withIdentifier: "toAddWishVC", sender: self)
     }
     
     
-
+    
 }

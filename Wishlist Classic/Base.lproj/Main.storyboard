@@ -112,7 +112,7 @@
                     <navigationItem key="navigationItem" title="WishList" id="4UJ-km-g7q"/>
                     <connections>
                         <outlet property="tableView" destination="g3x-hA-3zo" id="sNu-xx-YVu"/>
-                        <segue destination="hIo-B0-Ahr" kind="presentation" identifier="toAddWishVC" id="psJ-Y9-zyr"/>
+                        <segue destination="hIo-B0-Ahr" kind="presentation" identifier="toAddWishVC" modalPresentationStyle="fullScreen" id="psJ-Y9-zyr"/>
                         <segue destination="3yt-Fe-0ti" kind="show" identifier="toDetailVC" id="0TG-3V-xna"/>
                     </connections>
                 </viewController>
@@ -128,35 +128,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qtH-16-9qw">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="qtH-16-9qw">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You wished for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ClR-dv-QHD">
-                                        <rect key="frame" x="119" y="0.0" width="176" height="33.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="33.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDk-B6-nuk">
-                                        <rect key="frame" x="186" y="71.5" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDk-B6-nuk">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utj-o4-LKy">
-                                        <rect key="frame" x="186" y="130" width="42" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="utj-o4-LKy">
+                                        <rect key="frame" x="0.0" y="130" width="414" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SzS-Of-ZaA">
-                                        <rect key="frame" x="87" y="188.5" width="240" height="533.5"/>
+                                        <rect key="frame" x="0.0" y="188.5" width="414" height="533.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="ClR-dv-QHD" firstAttribute="top" secondItem="qtH-16-9qw" secondAttribute="top" constant="32" id="PoY-26-lqo"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -178,16 +175,91 @@
             </objects>
             <point key="canvasLocation" x="-36.231884057971016" y="2452.9017857142858"/>
         </scene>
-        <!--View Controller-->
+        <!--New Wish View Controller-->
         <scene sceneID="TdH-L9-cOy">
             <objects>
-                <viewController id="hIo-B0-Ahr" sceneMemberID="viewController">
+                <viewController id="hIo-B0-Ahr" customClass="NewWishViewController" customModule="Wishlist_Classic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i8e-0l-V3T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="WCO-z9-3tz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="31v-AS-D1s">
+                                        <rect key="frame" x="8" y="8" width="398" height="86"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add entry to wish list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE4-VB-TxQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="398" height="33.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will help to store it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-f2-VPM">
+                                                <rect key="frame" x="0.0" y="65.5" width="398" height="20.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="17n-WC-7ik">
+                                        <rect key="frame" x="8" y="172" width="398" height="329"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What would you like?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Vh-gen">
+                                                <rect key="frame" x="16" y="8" width="366" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="I0q-DU-m36"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description ( optional )" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hou-Xo-igl">
+                                                <rect key="frame" x="16" y="121" width="366" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="pBC-kR-5A3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-CV-FRG">
+                                        <rect key="frame" x="8" y="579" width="398" height="103"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-Vx-ZyP">
+                                        <rect key="frame" x="8" y="760" width="398" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="13E-Dz-FSq"/>
+                                        </constraints>
+                                        <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        <state key="normal" title="Save">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="saveButtonClicked:" destination="hIo-B0-Ahr" eventType="touchUpInside" id="Tr8-Uz-nLg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WCO-z9-3tz" firstAttribute="leading" secondItem="yRo-RQ-2Sy" secondAttribute="leading" id="ToW-hM-h7B"/>
+                            <constraint firstItem="yRo-RQ-2Sy" firstAttribute="bottom" secondItem="WCO-z9-3tz" secondAttribute="bottom" id="ew0-xf-bBL"/>
+                            <constraint firstItem="yRo-RQ-2Sy" firstAttribute="trailing" secondItem="WCO-z9-3tz" secondAttribute="trailing" id="fKt-Kh-5fk"/>
+                            <constraint firstItem="WCO-z9-3tz" firstAttribute="top" secondItem="yRo-RQ-2Sy" secondAttribute="top" id="qSE-wu-SLv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yRo-RQ-2Sy"/>
                     </view>
+                    <connections>
+                        <outlet property="wishDescription" destination="hou-Xo-igl" id="yKE-6h-frt"/>
+                        <outlet property="wishItem" destination="Y5q-Vh-gen" id="UZr-qZ-rcK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fup-En-w97" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
