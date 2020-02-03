@@ -19,6 +19,6 @@ struct Wish: Codable, Identifiable {
 }
 
 var wishes: [Wish] = [
-    .init(item: "One", wishDescription: "ada")
+    .init(item: "One item", wishDescription: "This is a sample description, but it is optional")
 ]
 

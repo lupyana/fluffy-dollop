@@ -16,9 +16,11 @@ class NewWishViewController: UIViewController {
         super.viewDidLoad()
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelButtonPressed))
+        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecogniser)
         
         self.isModalInPresentation = true
-      
+        
     }
     
     
@@ -28,7 +30,7 @@ class NewWishViewController: UIViewController {
         } else {
             let newWish = Wish(item: wishItem?.text ?? "", wishDescription: wishDescription.text!)
             wishes.append(newWish)
-             NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "load"), object: nil)
             dismiss(animated: true, completion: nil)
             
         }
@@ -45,6 +47,10 @@ class NewWishViewController: UIViewController {
     
     @objc func cancelButtonPressed() {
         
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
 }

@@ -17,7 +17,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        
+        let gestureRecogniser = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(gestureRecogniser)
         
     }
     
@@ -40,6 +41,10 @@ class ViewController: UIViewController {
         }
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
 }

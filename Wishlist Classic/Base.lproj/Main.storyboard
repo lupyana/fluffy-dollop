@@ -59,7 +59,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="sXr-2v-5zB"/>
                                         </constraints>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" title="Continue">
                                             <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         </state>
                                         <connections>
@@ -187,24 +187,25 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="31v-AS-D1s">
-                                        <rect key="frame" x="8" y="8" width="398" height="86"/>
+                                        <rect key="frame" x="8" y="8" width="398" height="144"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add entry to wish list" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wE4-VB-TxQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="398" height="33.5"/>
+                                                <rect key="frame" x="8" y="50" width="382" height="33.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We will help to store it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pwz-f2-VPM">
-                                                <rect key="frame" x="0.0" y="65.5" width="398" height="20.5"/>
+                                                <rect key="frame" x="8" y="115.5" width="382" height="20.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <edgeInsets key="layoutMargins" top="50" left="8" bottom="8" right="8"/>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="63" translatesAutoresizingMaskIntoConstraints="NO" id="17n-WC-7ik">
-                                        <rect key="frame" x="8" y="172" width="398" height="329"/>
+                                        <rect key="frame" x="8" y="230" width="398" height="329"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What would you like?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y5q-Vh-gen">
                                                 <rect key="frame" x="16" y="8" width="366" height="50"/>
@@ -226,7 +227,7 @@
                                         <edgeInsets key="layoutMargins" top="8" left="16" bottom="8" right="16"/>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehN-CV-FRG">
-                                        <rect key="frame" x="8" y="579" width="398" height="93"/>
+                                        <rect key="frame" x="8" y="637" width="398" height="35"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb7-Vx-ZyP">
